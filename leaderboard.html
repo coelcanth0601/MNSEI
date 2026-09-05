@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#173820">
+<title>Plant Scan Stats</title>
+<style>
+  body {
+    background: #fafaf7; color: #333;
+    max-width: 480px; margin: 0 auto; padding: 24px 20px 90px;
+  }
+  h1 { font-size: 20px; margin-bottom: 4px; }
+  .sub { font-size: 13px; color: #777; margin-bottom: 20px; }
+  .lb-row {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 8px; border-bottom: 1px solid #e5e2da;
+    font-size: 15px;
+  }
+  .lb-rank { width: 24px; color: #999; font-size: 13px; }
+  .lb-name { flex: 1; }
+  .lb-count { font-size: 13px; color: #555; }
+  a.back { display: inline-block; margin-top: 20px; color: #256b34; font-size: 14px; }
+  .lb-export {
+    margin-top: 16px; min-height: 40px; padding: 0 16px; font-size: 14px;
+    background: rgba(0,0,0,0.04); border: none; border-radius: 12px;
+    color: #333; cursor: pointer;
+  }
+  .lb-export:active { background: rgba(0,0,0,0.08); }
+
+  * { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  }
+  .site-watermark {
+    position: fixed; left: 0; right: 0;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    display: flex; justify-content: center;
+    pointer-events: none;
+    z-index: 900;
+  }
+  .site-watermark img {
+    height: 26px; opacity: 0.88;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.4));
+  }
+
+</style>
+</head>
+<body>
+<h1>Plant Scan Stats</h1>
+<div class="sub">How many times each plant's QR code has been scanned</div>
+<div id="leaderboard-list">Loading…</div>
+<button class="lb-export" id="lb-export-btn">Export as CSV</button>
+<br>
+<a class="back" href="index.html">&larr; Back</a>
+<div class="site-watermark"><img src="logo.png" alt="logo"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="game.js"></script>
+<script src="leaderboard.js"></script>
+<script>
+  window.addEventListener("load", function () {
+    loadLeaderboard();
+    document.getElementById("lb-export-btn").addEventListener("click", exportLeaderboardCSV);
+  });
+</script>
+</body>
+</html>

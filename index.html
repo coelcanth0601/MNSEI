@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#173820">
+<title>Garden Plants</title>
+<style>
+  body {
+    background: #fafaf7; margin: 0; padding: 24px 24px 90px;
+  }
+  h1 { font-size: 20px; color: #333; }
+  .top-links a { font-size: 14px; color: #256b34; margin-right: 16px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px; margin-top: 16px;
+  }
+  .card { text-decoration: none; color: #333; text-align: center; font-size: 13px; }
+  .card img {
+    width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+    border-radius: 12px; display: block; margin-bottom: 6px;
+  }
+
+  * { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  }
+  .site-watermark {
+    position: fixed; left: 0; right: 0;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    display: flex; justify-content: center;
+    pointer-events: none;
+    z-index: 900;
+  }
+  .site-watermark img {
+    height: 26px; opacity: 0.88;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.4));
+  }
+
+</style>
+</head>
+<body>
+<h1>Garden Plants (internal index)</h1>
+<div class="top-links">
+  <a href="leaderboard.html">Plant Scan Stats</a>
+  <a href="about.html">About this project</a>
+</div>
+<div class="grid">
+  <a class="card" href="plants/garden-site-mockup.html"><img src="plants/images/garden-site-mockup.png">Garden Site Mockup</a>
+  <a class="card" href="plants/test1.html"><img src="plants/images/test1.jpeg">Test1</a>
+  <a class="card" href="plants/test2.html"><img src="plants/images/test2.jpeg">Test2</a>
+  <a class="card" href="plants/test3.html"><img src="plants/images/test3.jpeg">Test3</a>
+</div>
+<div class="site-watermark"><img src="logo.png" alt="logo"></div>
+</body>
+</html>
