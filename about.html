@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#173820">
+<title>About this project</title>
+<style>
+body {
+background: #f4f1e8; color: #2c2c2e; margin: 0;
+min-height: 100dvh;
+display: flex; flex-direction: column; align-items: center;
+padding: 48px 20px calc(90px + env(safe-area-inset-bottom));
+}
+.hero-icon {
+width: 64px; height: 64px; border-radius: 20px;
+background: linear-gradient(135deg, #3d8b4c, #1e4626);
+display: flex; align-items: center; justify-content: center;
+font-size: 30px; margin-bottom: 18px;
+box-shadow: 0 8px 20px rgba(37,107,52,0.25);
+}
+h1 {
+font-size: 24px; font-weight: 700; margin: 0 0 6px;
+text-align: center; letter-spacing: -0.01em;
+}
+.subtitle {
+font-size: 14px; color: #8a8578; margin: 0 0 28px;
+text-align: center;
+}
+.card {
+background: #fff; border-radius: 20px;
+padding: 24px 22px; max-width: 420px; width: 100%;
+box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+box-sizing: border-box;
+}
+.card p {
+font-size: 15px; line-height: 1.7; color: #3a3a3c;
+margin: 0;
+}
+.actions {
+margin-top: 24px; width: 100%; max-width: 420px;
+display: flex; flex-direction: column; gap: 10px;
+}
+.btn {
+display: flex; align-items: center; justify-content: center;
+min-height: 48px; border-radius: 14px;
+font-size: 15px; font-weight: 600;
+text-decoration: none; cursor: pointer; border: none;
+font-family: inherit;
+}
+.btn-secondary {
+background: rgba(0,0,0,0.05); color: #3a3a3c;
+}
+.btn-secondary:active { background: rgba(0,0,0,0.09); }
+
+  * { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  }
+  .site-watermark {
+    position: fixed; left: 0; right: 0;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    display: flex; justify-content: center;
+    pointer-events: none;
+    z-index: 900;
+  }
+  .site-watermark img {
+    height: 26px; opacity: 0.88;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.4));
+  }
+
+</style>
+</head>
+<body>
+<div class="hero-icon">🌿</div>
+<h1>About This Project</h1>
+<div class="subtitle">Why these QR codes are here</div>
+<div class="card">
+<p>
+EDIT ME: Write a short blurb here about the garden and why these
+QR codes exist.
+</p>
+</div>
+<div class="actions">
+<a class="btn btn-secondary" href="javascript:history.back()">Back</a>
+</div>
+<div class="site-watermark"><img src="logo.png" alt="logo"></div>
+</body>
+</html>
